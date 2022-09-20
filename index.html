@@ -105,7 +105,7 @@
       let button = document.getElementById("todo-submit");
       let input = document.getElementById("todo-input");
       let output = document.getElementById("todo-output");
-      console.log(button)
+      // console.log(button)
       // TODO: Buatlah sebuah fungsi dengan nama fnClickHandler
       // Fungsi yang digunakan untuk menambahkan tulisan
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
@@ -123,10 +123,11 @@
       button.addEventListener('click', clickButton => {fnClickHandler()})
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
-      input.addEventListener('keyup', enterByid => {
+      input.addEventListener('keypress', enterByid => {
         // console.log(enterByid)
-        if(enterByid.keyCode === 13) {
+        if(enterByid.key === "Enter") {
           fnClickHandler()
+          // console.log(enterByid)
         }
       })
     </script>
